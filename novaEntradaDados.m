@@ -1,13 +1,13 @@
 %% Variaveis e funÃ§Ãµes
 cinj = 2;
 cini = 15;
-vetorCini = zeros(1, tempo);
+
 % ca = 3;
 % cb = 4;
 Lx = 9;
 alfa = 0.000008;
 tempo = 1000;
-divEspaco = 25;
+divEspaco = 250;
 divTempo = 80;
 u = 0.001;
 deltaX = Lx / divEspaco; % NÃºmero de divisÃµes espaciais.
@@ -16,9 +16,10 @@ aux = 0; % Definindo aux = 0 globalmente.
 vetorEspaco = zeros(1,divEspaco); % Inicializando vetor da malha espacial.
 oldVet = zeros(1,divEspaco); % Inicializando vetor da concentraÃ§Ã£o antiga.
 newVet = zeros(1,divEspaco); % Inicializando vetor da concentraÃ§Ã£o nova.
-
+vetorCini = zeros(1, tempo);
 vetorTempo = zeros(1,tempo);
 tamVetorTempo = length(vetorTempo);
+DeltaTMAX = (1)/(((2*alfa)/(deltaX^2)) + (u/deltaX));
 for i=1:tempo
     vetorTempo(i) = i;
 
@@ -35,10 +36,10 @@ end
 
 %Gráfico Condição Inicial
 
-plot(vetorTempo,vetorCini,'r');
-title("Troca da condição inicial");
-xlabel("Lx");
-ylabel("Condição inicial"); 
+% plot(vetorTempo,vetorCini,'r');
+% title("Troca da condição inicial");
+% xlabel("Lx");
+% ylabel("Condição inicial"); 
 
 
 
