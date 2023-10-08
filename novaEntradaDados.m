@@ -1,11 +1,36 @@
 %% Variaveis e funÃ§Ãµes
-cinj = 2;
+cinj = 10;
 cini = 15;
+vetorCini = zeros(1, tempo);
 % ca = 3;
 % cb = 4;
 Lx = 9;
 alfa = 0.0008;
 tempo = 1000;
+vetorTempo = zeros(1,tempo);
+tamVetorTempo = length(vetorTempo);
+for i=1:tempo
+    vetorTempo(i) = i;
+
+end
+for j=1:tamVetorTempo/2
+    vetorCini(j) = cini;
+end
+for k=(tamVetorTempo/2)+1:tamVetorTempo
+    vetorCini(k) = 10;
+end
+
+
+
+
+%Gráfico Condição Inicial
+
+plot(vetorTempo,vetorCini,'r');
+title("Troca da condição inicial");
+xlabel("Lx");
+ylabel("Condição inicial"); 
+
+
 divEspaco = 200;
 divTempo = 80;
 u = 0.0001;
