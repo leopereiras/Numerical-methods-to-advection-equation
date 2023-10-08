@@ -28,19 +28,19 @@ end
 for j=1:tamVetorTempo/2
     vetorCini(j) = cini;
 end
-for k=(tamVetorTempo/2)+1:tamVetorTempo
+for k=(tamVetorTempo/2):tamVetorTempo
     vetorCini(k) = 10;
 end
 
 
 
 
-%Gráfico Condição Inicial
+% Gráfico Condição Inicial
 
-% plot(vetorTempo,vetorCini,'r');
-% title("Troca da condição inicial");
-% xlabel("Lx");
-% ylabel("Condição inicial"); 
+plot(vetorTempo,vetorCini,'r');
+title("Troca da condição inicial");
+xlabel("Lx");
+ylabel("Condição inicial"); 
 
 
 
