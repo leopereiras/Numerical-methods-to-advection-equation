@@ -1,0 +1,18 @@
+START
+// Cinj
+2
+// Cini
+15
+// Lx
+9
+// Alfa
+0.000008
+// u
+0.001
+// Tempo
+1000
+// divEspaco nodalizacao
+25
+// divTempo nodalizacao
+80
+END
