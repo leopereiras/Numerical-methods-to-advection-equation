@@ -1,4 +1,4 @@
-function [y] = mvf(deltaT,tempo,aux,deltaX,cinj,cini,alfa,newVet,oldVet,u,divEspaco,vetorEspaco,DeltaTMAX)
+function [y] = mvf(deltaT,tempo,aux,deltaX,cinj,cini,alfa,newVet,oldVet,u,divEspaco,vetorEspaco,deltaTMAX)
         
 while aux < tempo
        if (aux>tempo/2)
@@ -20,7 +20,7 @@ plot(vetorEspaco, newVet,'g');
 title("Equação de Advecção-Difusão");
 grid on
 hold on
-texto_anotacao = sprintf('DeltaT: %.3f\nDeltaTMAX: %.3f', deltaT, DeltaTMAX);
+texto_anotacao = sprintf('DeltaT: %.3f\nDeltaTMAX: %.3f', deltaT, deltaTMAX);
 annotation('textbox',[0.65,0.2,0.2,0.7] ,'String',texto_anotacao,'FitBoxToText','on');
 xlabel("Lx");
 ylabel("Concentração");

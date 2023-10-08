@@ -12,6 +12,7 @@ divTempo = 80;
 u = 0.001;
 deltaX = Lx / divEspaco; % Número de divisões espaciais.
 deltaT = tempo / divTempo;  % Número de divisões temporais.
+deltaTMAX = (1)/(((2*alfa)/(deltaX^2)) + (u/deltaX));
 aux = 0; % Definindo aux = 0 globalmente.
 vetorEspaco = zeros(1,divEspaco); % Inicializando vetor da malha espacial.
 oldVet = zeros(1,divEspaco); % Inicializando vetor da concentração antiga.
@@ -19,7 +20,7 @@ newVet = zeros(1,divEspaco); % Inicializando vetor da concentração nova.
 vetorCini = zeros(1, tempo);
 vetorTempo = zeros(1,tempo);
 tamVetorTempo = length(vetorTempo);
-DeltaTMAX = (1)/(((2*alfa)/(deltaX^2)) + (u/deltaX));
+
 for i=1:tempo
     vetorTempo(i) = i;
 
