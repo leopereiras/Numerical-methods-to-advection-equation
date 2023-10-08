@@ -1,12 +1,22 @@
 %% Variaveis e funções
-cinj = 10;
+cinj = 2;
 cini = 15;
 vetorCini = zeros(1, tempo);
 % ca = 3;
 % cb = 4;
 Lx = 9;
-alfa = 0.0008;
+alfa = 0.000008;
 tempo = 1000;
+divEspaco = 25;
+divTempo = 80;
+u = 0.001;
+deltaX = Lx / divEspaco; % Número de divisões espaciais.
+deltaT = tempo / divTempo;  % Número de divisões temporais.
+aux = 0; % Definindo aux = 0 globalmente.
+vetorEspaco = zeros(1,divEspaco); % Inicializando vetor da malha espacial.
+oldVet = zeros(1,divEspaco); % Inicializando vetor da concentração antiga.
+newVet = zeros(1,divEspaco); % Inicializando vetor da concentração nova.
+
 vetorTempo = zeros(1,tempo);
 tamVetorTempo = length(vetorTempo);
 for i=1:tempo
@@ -31,15 +41,7 @@ xlabel("Lx");
 ylabel("Condi��o inicial"); 
 
 
-divEspaco = 200;
-divTempo = 80;
-u = 0.0001;
-deltaX = Lx / divEspaco; % Número de divisões espaciais.
-deltaT = tempo / divTempo;  % Número de divisões temporais.
-aux = 0; % Definindo aux = 0 globalmente.
-vetorEspaco = zeros(1,divEspaco); % Inicializando vetor da malha espacial.
-oldVet = zeros(1,divEspaco); % Inicializando vetor da concentração antiga.
-newVet = zeros(1,divEspaco); % Inicializando vetor da concentração nova.
+
 
 for i = 2:divEspaco
     vetorEspaco(i) = vetorEspaco(i-1) + deltaX; % Preenchendo a malha começando do i=2 por causa da condição de contorno
