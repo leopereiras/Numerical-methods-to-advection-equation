@@ -1,13 +1,12 @@
 %% Variaveis e funções
-cinj = 2;
-cini = 15;
-
 % ca = 3;
 % cb = 4;
+cinj = 2;
+cini = 15;
 Lx = 9;
 alfa = 0.000008;
 tempo = 1000;
-divEspaco = 250;
+divEspaco = 25;
 divTempo = 80;
 u = 0.001;
 deltaX = Lx / divEspaco; % Número de divisões espaciais.

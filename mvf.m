@@ -2,7 +2,7 @@ function [y] = mvf(deltaT,tempo,aux,deltaX,cinj,cini,alfa,newVet,oldVet,u,divEsp
         
 while aux < tempo
        if (aux>tempo/2)
-           cini = cinj;
+           cini = 10;
        end
     newVet(1) = oldVet(1) - ((deltaT/deltaX)*(u*2*(oldVet(1)-cini)) - alfa*((oldVet(2)-3*oldVet(1)+2*cini)/deltaX));
     for j = 2:divEspaco-1

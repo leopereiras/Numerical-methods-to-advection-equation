@@ -1,0 +1,8 @@
+cinj = 2;
+cini = 15;
+Lx = 9;
+alfa = 0.000008;
+tempo = 1000;
+divEspaco = 25;
+divTempo = 80;
+u = 0.001;
