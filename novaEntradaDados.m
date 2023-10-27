@@ -1,7 +1,8 @@
 %% Variaveis e fun√ß√µes
-% ca = 3;
-% cb = 4;
-cinj = 2;
+ca = 10;
+cb = 5;
+change = true;
+cinj = 20;
 cini = 15;
 Lx = 9;
 alfa = 0.000008;
@@ -16,6 +17,23 @@ aux = 0; % Definindo aux = 0 globalmente.
 vetorEspaco = zeros(1,divEspaco); % Inicializando vetor da malha espacial.
 oldVet = zeros(1,divEspaco); % Inicializando vetor da concentra√ß√£o antiga.
 newVet = zeros(1,divEspaco); % Inicializando vetor da concentra√ß√£o nova.
+
+
+%Preenchendo vetores com as concentraÁıes
+for i = 1:divEspaco
+    oldVet(i)=cb;
+end
+for z = 1:divEspaco/2
+    oldVet(z)=ca;
+end
+
+for i = 1:divEspaco
+    newVet(i)=cb;
+end
+for z = 1:divEspaco/2
+    newVet(z)=ca;
+end
+%% Preenchendo vetores pro plot da condiÁ„o inicial
 vetorCini = zeros(1, tempo);
 vetorTempo = zeros(1,tempo);
 tamVetorTempo = length(vetorTempo);
@@ -43,7 +61,7 @@ ylabel("CondiÁ„o inicial");
 
 
 
-
+%%
 for i = 2:divEspaco
     vetorEspaco(i) = vetorEspaco(i-1) + deltaX; % Preenchendo a malha come√ßando do i=2 por causa da condi√ß√£o de contorno
 end
