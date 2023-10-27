@@ -1,8 +1,7 @@
 %% Variaveis e funÃ§Ãµes
 ca = 10;
 cb = 5;
-change = true;
-cinj = 20;
+cinj = 10;
 cini = 15;
 Lx = 9;
 alfa = 0.000008;
@@ -54,10 +53,10 @@ end
 
 % Gráfico Condição Inicial
 
-plot(vetorTempo,vetorCini,'r');
-title("Troca da condição inicial");
-xlabel("Lx");
-ylabel("Condição inicial"); 
+% plot(vetorTempo,vetorCini,'r');
+% title("Troca da condição inicial");
+% xlabel("Lx");
+% ylabel("Condição inicial"); 
 
 
 

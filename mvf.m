@@ -18,12 +18,23 @@ end
         y(k) = newVet(k);
     end
 
+% plot(vetorEspaco, newVet,'r');
+% title("Equação de Advecção-Difusão MVF");
+% grid on
+% hold on
+% texto_anotacao = sprintf('DeltaT: %.3f\nDeltaTMAX: %.3f', deltaT, deltaTMAX);
+% annotation('textbox',[0.63,0.2,0.2,0.7] ,'String',texto_anotacao,'FitBoxToText','on');
+% xlabel("Lx");
+% ylabel("Concentração");
+
+
+%Plot sem anotacao para varios graficos (Necessario ir mudando a cor
+%manualmente e os parametros no arquivo novaEntradaDados.m manualmente
+%e comentar o plot de cima
 plot(vetorEspaco, newVet,'g');
 title("Equação de Advecção-Difusão MVF");
 grid on
 hold on
-texto_anotacao = sprintf('DeltaT: %.3f\nDeltaTMAX: %.3f', deltaT, deltaTMAX);
-annotation('textbox',[0.63,0.2,0.2,0.7] ,'String',texto_anotacao,'FitBoxToText','on');
 xlabel("Lx");
 ylabel("Concentração");
 
