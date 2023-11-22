@@ -9,4 +9,10 @@
 - Lax-Wendroff
 - Beam-Warmimg
 
-The objective is to use the finite volume method to solve the advection-diffusion equation.
+> The objective is to use the finite volume method to solve the advection-diffusion equation.
+
+## How to use
+
+> Modify the desired parameter in the "novaEntradaDados" file and run the "main" file.
+
+> Comment on the methods you will not run. (If you run more than one method at the same time, it will result in an error)
